@@ -1,0 +1,47 @@
+networks:
+   default:
+      external: true
+      name: roboshop
+services:
+   mongodb:
+      container_name: mongodb
+      image: mongodb:v1
+   catalogue:
+      container_name: catalogue
+      image: catalogue:v1
+      depends_on:
+      - mongodb
+   mysql:
+      container_name: mysql
+      image: mysql:v1
+   user:
+      container_name: user
+      image: user:v1
+      depends_on:
+      - mongodb
+      - redis
+   cart:
+      container_name: cart
+      image: cart:v1
+      depends_on:
+      - catalogue
+      - redis
+   redis:
+      image: redis
+      container_name: redis
+   web:
+      container_name: web
+      image: web:v1
+      ports:
+      - "80:80"
+      depends_on:
+      - catalogue
+      - user
+      - cart
+   shipping:
+      container_name: shipping
+      image: shipping:v1
+      depends_on:
+      - mysql
+
+
