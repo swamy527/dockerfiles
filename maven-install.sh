@@ -26,5 +26,5 @@ mv apache-maven-3.9.9 maven
 
 sed -i '$a\export M2_HOME=/opt/maven \nexport PATH=$PATH:$M2_HOME/bin' /home/ec2-user/.bash_profile > /dev/null
 
-source /home/ec2-user/.bash_profile
+echo "type source .bash_profile"
 
