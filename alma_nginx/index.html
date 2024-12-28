@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZooPark</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+            padding: 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ZooPark</h1>
+        <p>Explore the wonders of wildlife</p>
+    </header>
+    <div class="container">
+        <div class="card">
+            <img src="./Lion.jpg" alt="Lion">
+            <h3>Lion</h3>
+            <p>The king of the jungle, known for its majestic mane and roar.</p>
+        </div>
+        <div class="card">
+            <img src="./Elephant.jpg" alt="Elephant">
+            <h3>Elephant</h3>
+            <p>Gentle giants of the wild, famous for their intelligence and trunks.</p>
+        </div>
+        <div class="card">
+            <img src="./Zebra.jpg" alt="Zebra">
+            <h3>Zebra</h3>
+            <p>Known for their striking black-and-white striped coats.</p>
+        </div>
+        <div class="card">
+            <img src="./Giraffe.jpg" alt="Giraffe">
+            <h3>Giraffe</h3>
+            <p>The tallest land animals, recognized by their long necks and spots.</p>
+        </div>
+    </div>
+</body>
+</html>
