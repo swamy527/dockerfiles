@@ -4,6 +4,5 @@ label course=java \
 run yum install nginx -y
 run rm -rf /usr/share/nginx/html
 workdir /usr/share/nginx/html
-copy . . 
-run chmod -R 777 /usr/share/nginx/html
+copy zoopark . 
 cmd ["nginx","-g","daemon off;"]
